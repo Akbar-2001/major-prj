@@ -1,0 +1,23 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+
+{%block content%}
+<style>
+    h1{
+      margin-top: 10%;
+    }
+    </style>
+<div class="slider slider-revolution revolution-slider  fullwidth">
+            <div class="shadowWrapper">
+                <center>
+                    <h1>GradientBoostingRegressor Result</h1>
+                    <h2>Mean Absolute Error <font color="RED">{{mae}}</font> </h2>
+                    <h2>Mean Squared Error <font color="RED">{{mse}}</font> </h2>
+                    <h2>r2 Score <font color="RED">{{r2}}</font> </h2>
+                    <!-- <h2>Score <font color="RED">{{score}}</font> </h2> -->
+                   
+
+                </center>
+
+            
+{%endblock%}

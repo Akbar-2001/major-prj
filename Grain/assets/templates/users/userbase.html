@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Legend</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static  'css/style.css' %}" rel="stylesheet">
+    <link rel='stylesheet' id='prettyphoto-css' href="{% static 'css/prettyPhoto.css' %}" type='text/css' media='all'>
+    <link href="{% static  'css/fontello.css' %}" type="text/css" rel="stylesheet">
+    <!--[if lt IE 7]>
+<link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
+<![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+
+
+    </style>
+    <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
+    <!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollTo-1.4.2-min.js' %}"></script>
+    <script src="{% static 'js/jquery.localscroll-1.2.7-min.js' %}"></script>
+    <script charset="utf-8">
+        $(document).ready(function () {
+            $("a[rel^='prettyPhoto']").prettyPhoto();
+        });
+    </script>
+</head>
+<body>
+<div class="navbar-wrapper">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container"><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                <h1 class="brand"><a href="{% url 'UserHome' %}">Grain!</a></h1>
+                <nav class="pull-right nav-collapse collapse">
+                    <ul id="menu-main" class="nav">
+                        <li><a title="portfolio" href="{% url 'UserHome' %}">Home</a></li>
+
+                        <li><a title="contact" href="{% url 'ViewData' %}">ViewData</a></li>
+                        <li><a title="contact" href="{% url 'SVR' %}">SVR</a></li>
+                        <li><a title="contact" href="{% url 'RandomForest' %}">Random Forest</a></li>
+                        <li><a title="contact" href="{% url 'GradientBoosting' %}">Gradient Boosting
+                            Decision Tree (GBDT)</a></li>
+                            <li><a title="contact" href="{% url 'GRSVR' %}">GR-SVR</a></li>
+                        <li><a title="contact" href="{% url 'index' %}">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="top"></div>
+
+
+
+
+
+
+{% block content %}
+
+{% endblock %}
+<hr>
+<div class="footer-wrapper">
+    <div class="container">
+        <footer>
+            <p style="margin-top:-10px ;">&copy; 2021 <a>Alex Corporation</a>. All rights reserved.</p>
+
+        </footer>
+    </div>
+</div>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+<script src="{% static 'js/site.js' %}"></script>
+</body>
+</html>
